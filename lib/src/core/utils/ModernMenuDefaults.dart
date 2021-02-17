@@ -4,6 +4,7 @@ class ModernMenuDefaults {
   static Color unselectedColor = Color(0xffC5C6CE);
   static Color selectedColor = Color(0xff00D394);
   static IconData iconData = Icons.person;
+  static double iconSize = ScreenUtil().setSp(22);
   static bool sidebarWebItensExpandedDefault = true;
 
   static Widget get divisorLineMobile => Padding(

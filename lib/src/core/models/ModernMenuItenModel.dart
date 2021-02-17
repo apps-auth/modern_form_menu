@@ -92,6 +92,7 @@ extension MenuItenModelExtensions on ModernMenuItenModel {
       selected: this.selected,
       isExpanded: this.isExpanded ?? false,
       iconData: this.iconData ?? ModernMenuDefaults.iconData,
+      iconSize: this.iconSize ?? ModernMenuDefaults.iconSize,
       selectedColor: this.selectedColor ?? ModernMenuDefaults.selectedColor,
       unselectedColor:
           this.unselectedColor ?? ModernMenuDefaults.unselectedColor,
