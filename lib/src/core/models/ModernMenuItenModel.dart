@@ -117,7 +117,7 @@ extension MenuItenModelExtensions on ModernMenuItenModel {
   }
 
   Widget get toWidget {
-    if (kIsWeb) {
+    if (ModernFormUtils.isLargeDevice) {
       return this.toWeb;
     } else {
       return this.toMobile;

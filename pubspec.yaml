@@ -1,6 +1,6 @@
 name: modern_form_menu
 description: A new Flutter package project.
-version: 0.0.2-prerelease
+version: 0.0.3-prerelease
 repository: https://github.com/apps-auth/modern_form_menu
 homepage: https://github.com/apps-auth/modern_form_menu
 
@@ -11,7 +11,7 @@ environment:
 dependencies:
   get: ">=3.24.0 <4.0.0"
   flutter_screenutil: ">=3.1.1 <3.1.2"
-  modern_form: ">=0.0.2-prerelease <1.0.0-prerelease"
+  modern_form: ">=0.0.7-prerelease <1.0.0-prerelease"
   flutter:
     sdk: flutter
 

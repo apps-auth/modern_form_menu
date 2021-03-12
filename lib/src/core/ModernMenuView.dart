@@ -10,7 +10,7 @@ class ModernMenuView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return kIsWeb
+    return ModernFormUtils.isLargeDevice
         ? ModernMenuWebView(controller: controller)
         : ModernMenuMobileView(controller: controller);
   }
