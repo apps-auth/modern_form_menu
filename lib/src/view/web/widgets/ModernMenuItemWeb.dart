@@ -1,23 +1,23 @@
 part of modern_form_menu;
 
 class ModernMenuItemWeb extends StatefulWidget {
-  final IconData iconData;
-  final double iconSize;
+  final IconData? iconData;
+  final double? iconSize;
   final String title;
   final Function onTap;
-  final bool Function() selected;
-  final Color selectedColor;
-  final Color unselectedColor;
-  final bool isExpanded;
+  final bool Function()? selected;
+  final Color? selectedColor;
+  final Color? unselectedColor;
+  final bool? isExpanded;
 
   const ModernMenuItemWeb({
-    Key key,
-    @required this.iconData,
-    @required this.title,
-    @required this.onTap,
-    @required this.selected,
-    @required this.selectedColor,
-    @required this.unselectedColor,
+    Key? key,
+    this.iconData,
+    required this.title,
+    required this.onTap,
+    required this.selected,
+    this.selectedColor,
+    this.unselectedColor,
     this.isExpanded,
     this.iconSize,
   }) : super(key: key);
@@ -31,14 +31,15 @@ class _ModernMenuItemWebState extends State<ModernMenuItemWeb> {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
-    bool isSelected = (widget?.selected() ?? false);
+    bool isSelected = widget.selected != null ? widget.selected!() : false;
     bool isHover = hover | isSelected;
 
     if (isSelected) {
       isHover = true;
     }
 
-    Color color = isHover ? widget.selectedColor : widget.unselectedColor;
+    Color color = (isHover ? widget.selectedColor : widget.unselectedColor) ??
+        Colors.blue;
 
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
@@ -53,7 +54,7 @@ class _ModernMenuItemWebState extends State<ModernMenuItemWeb> {
               });
             }
           },
-          onTap: widget.onTap,
+          onTap: widget.onTap as void Function()?,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -64,7 +65,7 @@ class _ModernMenuItemWebState extends State<ModernMenuItemWeb> {
                     color: color,
                     size: widget.iconSize ?? ScreenUtil().setSp(22),
                   ),
-                  widget.isExpanded != null && widget.isExpanded
+                  widget.isExpanded != null && widget.isExpanded!
                       ? Padding(
                           padding:
                               EdgeInsets.only(left: ScreenUtil().setWidth(10)),
@@ -74,7 +75,7 @@ class _ModernMenuItemWebState extends State<ModernMenuItemWeb> {
                             child: Wrap(
                               children: [
                                 Text(
-                                  widget?.title ?? "",
+                                  widget.title,
                                   style: TextStyle(
                                     color: color,
                                     fontSize: ScreenUtil().setSp(15),

@@ -1,16 +1,16 @@
 part of modern_form_menu;
 
 class ModernMenuSideBar extends StatelessWidget {
-  final String labelImageUrl;
-  final String labelImageAsset;
-  final String labelTitle;
-  final String labelDescription;
+  final String? labelImageUrl;
+  final String? labelImageAsset;
+  final String? labelTitle;
+  final String? labelDescription;
   final Color selectedColor;
   final Color unselectedColor;
-  final Color backgroundColor;
-  final List<Widget> itens;
-  final List<Widget> bottonItens;
-  final bool isExpanded;
+  final Color? backgroundColor;
+  final List<Widget>? itens;
+  final List<Widget>? bottonItens;
+  final bool? isExpanded;
   final void Function() onTapExpanded;
 
   ModernMenuSideBar({
@@ -18,19 +18,19 @@ class ModernMenuSideBar extends StatelessWidget {
     this.labelImageAsset,
     this.labelTitle,
     this.labelDescription,
-    @required this.backgroundColor,
-    @required this.itens,
+    required this.backgroundColor,
+    this.itens,
     this.bottonItens,
-    @required this.selectedColor,
-    @required this.unselectedColor,
-    @required this.isExpanded,
-    @required this.onTapExpanded,
+    required this.selectedColor,
+    required this.unselectedColor,
+    this.isExpanded,
+    required this.onTapExpanded,
   });
 
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
-    bool _isExpanded = isExpanded != null && isExpanded;
+    bool _isExpanded = isExpanded != null && isExpanded!;
 
     return AnimatedContainer(
       duration: Duration(milliseconds: 400),

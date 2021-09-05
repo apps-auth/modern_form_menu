@@ -4,8 +4,8 @@ class ModernMenuView extends StatelessWidget {
   final ModernMenuViewModel controller;
 
   const ModernMenuView({
-    Key key,
-    @required this.controller,
+    Key? key,
+    required this.controller,
   }) : super(key: key);
 
   @override

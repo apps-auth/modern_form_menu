@@ -2,7 +2,7 @@ part of modern_form_menu;
 
 class ModernMenuViewModel extends GetxController {
   final List<ModernMenuItenModel> itensModel;
-  final ModernMenuSidebarWebModel sidebarWebModel;
+  final ModernMenuSidebarWebModel? sidebarWebModel;
 
   final _menuItensExpanded =
       ModernMenuDefaults.sidebarWebItensExpandedDefault.obs;
@@ -14,7 +14,7 @@ class ModernMenuViewModel extends GetxController {
   set setState(bool value) => this._setState.value = value;
 
   ModernMenuViewModel({
-    @required this.itensModel,
+    required this.itensModel,
     this.sidebarWebModel,
   });
 

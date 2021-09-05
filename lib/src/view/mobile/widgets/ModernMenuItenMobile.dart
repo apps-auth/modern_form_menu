@@ -5,22 +5,22 @@ class ModernMenuItenMobile extends StatelessWidget {
   final Function onTap;
 
   const ModernMenuItenMobile({
-    Key key,
-    @required this.text,
-    @required this.onTap,
+    Key? key,
+    required this.text,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onTap,
+      onTap: onTap as void Function()?,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              text ?? "",
+              text,
               style: TextStyle(
                 fontSize: ScreenUtil().setSp(18.5),
                 fontWeight: FontWeight.w500,

@@ -1,19 +1,19 @@
 part of modern_form_menu;
 
 class ModernMenuItenModel {
-  final IconData iconData;
-  final double iconSize;
+  final IconData? iconData;
+  final double? iconSize;
   final String title;
   final Function onTap;
-  final bool Function() selected;
-  final Color selectedColor;
-  final Color unselectedColor;
-  final bool isExpanded;
-  final bool visible;
+  final bool Function()? selected;
+  final Color? selectedColor;
+  final Color? unselectedColor;
+  final bool? isExpanded;
+  final bool? visible;
 
   ModernMenuItenModel({
-    @required this.title,
-    @required this.onTap,
+    required this.title,
+    required this.onTap,
     this.iconData,
     this.iconSize,
     this.selected,
@@ -24,15 +24,15 @@ class ModernMenuItenModel {
   });
 
   ModernMenuItenModel copyWith({
-    IconData iconData,
-    double iconSize,
-    String title,
-    Function onTap,
-    bool Function() selected,
-    Color selectedColor,
-    Color unselectedColor,
-    bool isExpanded,
-    bool visible,
+    IconData? iconData,
+    double? iconSize,
+    String? title,
+    Function? onTap,
+    bool Function()? selected,
+    Color? selectedColor,
+    Color? unselectedColor,
+    bool? isExpanded,
+    bool? visible,
   }) {
     return ModernMenuItenModel(
       iconData: iconData ?? this.iconData,
@@ -83,7 +83,7 @@ class ModernMenuItenModel {
 }
 
 extension MenuItenModelExtensions on ModernMenuItenModel {
-  bool get isVisible => this.visible == null || this.visible;
+  bool get isVisible => this.visible == null || this.visible!;
 
   ModernMenuItemWeb get toMenuItemWeb {
     return ModernMenuItemWeb(

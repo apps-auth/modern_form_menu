@@ -4,8 +4,8 @@ class ModernMenuMobileView extends StatelessWidget {
   final ModernMenuViewModel controller;
 
   const ModernMenuMobileView({
-    Key key,
-    @required this.controller,
+    Key? key,
+    required this.controller,
   }) : super(key: key);
 
   @override
@@ -13,7 +13,7 @@ class ModernMenuMobileView extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      itemCount: controller?.itens?.length ?? 0,
+      itemCount: controller.itens.length,
       itemBuilder: (context, index) {
         Widget iten = controller.itens[index];
 

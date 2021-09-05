@@ -1,13 +1,13 @@
 part of modern_form_menu;
 
 class ModernMenuSidebarWebModel {
-  final String labelImageUrl;
-  final String labelImageAsset;
-  final String labelTitle;
-  final String labelDescription;
-  final Color backgroundColor;
-  final Color selectedColor;
-  final Color unselectedColor;
+  final String? labelImageUrl;
+  final String? labelImageAsset;
+  final String? labelTitle;
+  final String? labelDescription;
+  final Color? backgroundColor;
+  final Color? selectedColor;
+  final Color? unselectedColor;
 
   ModernMenuSidebarWebModel({
     this.labelImageUrl,
@@ -20,13 +20,13 @@ class ModernMenuSidebarWebModel {
   });
 
   ModernMenuSidebarWebModel copyWith({
-    String labelImageUrl,
-    String labelImageAsset,
-    String labelTitle,
-    String labelDescription,
-    Color backgroundColor,
-    Color selectedColor,
-    Color unselectedColor,
+    String? labelImageUrl,
+    String? labelImageAsset,
+    String? labelTitle,
+    String? labelDescription,
+    Color? backgroundColor,
+    Color? selectedColor,
+    Color? unselectedColor,
   }) {
     return ModernMenuSidebarWebModel(
       labelImageUrl: labelImageUrl ?? this.labelImageUrl,
