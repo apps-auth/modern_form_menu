@@ -309,7 +309,7 @@ packages:
       name: modern_form
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.6"
   modern_form_esys_flutter_share:
     dependency: transitive
     description:
@@ -323,7 +323,7 @@ packages:
       name: modern_form_popupmenu
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.2"
   nested:
     dependency: transitive
     description:
