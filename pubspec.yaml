@@ -1,8 +1,10 @@
 name: modern_form_menu
 description: A new Flutter package project.
-version: 2.0.0
+version: 2.1.0
 repository: https://github.com/apps-auth/modern_form_menu
 homepage: https://github.com/apps-auth/modern_form_menu
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -10,12 +12,17 @@ environment:
 dependencies:
   get: '>=4.3.8 <5.0.0'
   flutter_screenutil: '>=5.0.0+2 <6.0.0'
-  modern_form: ">=1.0.6 <2.0.0"
+  modern_form: 
+    git:
+      url: git@github.com:apps-auth/modern_form_core.git    
   flutter:
     sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+dependency_overrides:
+  win32: '>=5.0.0 <6.0.0'
 
 flutter:
